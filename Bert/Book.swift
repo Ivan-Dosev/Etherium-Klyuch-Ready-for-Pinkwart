@@ -60,7 +60,7 @@ class KluchViewMosel : ObservableObject{
             }
             .store(in: &cancellabes)
         $description
-            .debounce(for: .seconds(0.4) , scheduler: DispatchQueue.main)
+            .debounce(for: .seconds(2) , scheduler: DispatchQueue.main)
             .sink { returneddata in
                 if returneddata.count > 20 {
                     UIApplication.shared.endEditing()
